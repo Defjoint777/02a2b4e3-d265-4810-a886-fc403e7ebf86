@@ -41,6 +41,19 @@ Understanding these systems and switching between them is crucial in computer sc
 In this task, you will practice converting natural numbers between binary, decimal, and hexadecimal forms. Each conversion requires understanding the place value system used in each base.
 
 1. **Convert 45 in decimal to binary and hexadecimal**:
+   45 =
+   45/2 = 22 (1)
+   22/2 = 11 (0)
+   11/2 = 5  (1)
+   5/2 = 2   (1)
+   2/2 = 1   (0)
+   1/2 = 0   (1)
+   
+128  64 32 16  8  4  2  1
+       1  0   1  1   0  1   
+
+       45 / 16 = 2 (13)
+       2D  
 
    * **To Binary**: Repeatedly divide the number by 2, noting the remainders. Reverse the sequence of remainders to get the binary number.
 
@@ -54,14 +67,15 @@ In this task, you will practice converting natural numbers between binary, decim
 
      * 45 ÷ 16 = 2 remainder 13 → 13 corresponds to D → Hex = 2D₁₆
 
-2. **Convert 11011 in binary to decimal and hexadecimal**:
+3. **Convert 11011 in binary to decimal and hexadecimal**:
 
    * **To Decimal**: Use positional values from right to left.
 
      * 1×2⁴ + 1×2³ + 0×2² + 1×2¹ + 1×2⁰ = 16 + 8 + 0 + 2 + 1 = 27₁₀
    * **To Hexadecimal**: Group binary digits into 4s from the right: 0001 1011 → 1B₁₆
 
-3. **Convert 7F in hexadecimal to binary and decimal**:
+  0001 1011 = 1 und 1+2+8 = 1,11 = 1B 
+4. **Convert 7F in hexadecimal to binary and decimal**:
 
    * **To Binary**: 7 = 0111, F = 1111 → Binary = 01111111₂
    * **To Decimal**: 7×16 + 15 = 112 + 15 = 127₁₀
@@ -75,12 +89,21 @@ In this task, we will perform additions in binary, hexadecimal, and decimal syst
    * Convert to decimal: 1011 = 11, 1101 = 13
    * Add: 11 + 13 = 24
    * Convert the sum back to binary: 24 ÷ 2 → 11000₂
+   * add: 24 / 2 = 12 (0)
+   * 12 / 2 = 6 (0)
+   * 6 / 2 = 3(0)
+   * 3/2 = 1(1)
+   * 1/2 = 0 (1)
+   *  B0 + C0
 
 2. **Add 3A₁₆ and 29₁₆**:
 
    * Convert to decimal: 3A = 58, 29 = 41
    * Add: 58 + 41 = 99
    * Convert to hexadecimal: 99 ÷ 16 = 6 remainder 3 → 63₁₆
+   * 3*16 + 10 = 58 dez || 2*16 + 9*16 = 464 dez
+   * 
+   * 3 = 0011 + A(10)1010 + 2 = 0010 + 9 = 1001 == 0011101000101001
 
 3. **Add 58₁₀ and 74₁₀**:
 
@@ -113,12 +136,26 @@ In this task, we will multiply numbers in each system and convert the result int
 ### Questions
 
 1. What is the base of the decimal, binary, and hexadecimal systems?
-2. What are the digits available in hexadecimal?
-3. How is the number 255 represented in binary and hexadecimal?
-4. Convert the binary number 100101 to decimal.
-5. Convert the hexadecimal number B3 to decimal.
-6. How do you add two binary numbers? Show an example.
-
+   base-2, base-10, base-16
+3. What are the digits available in hexadecimal?
+   0-9 A-F
+5. How is the number 255 represented in binary and hexadecimal?
+   11111111
+7. Convert the binary number 100101 to decimal.
+   1 + 4 + 32 = 37
+9. Convert the hexadecimal number B3 to decimal.
+    11 + 3*16 = 59
+11. How do you add two binary numbers? Show an example.
+    exmpl : 1011+1111
+    1111 = 15    
+    1011 = 11
+    -----
+        11010 = 26
+    0+0=0
+    1+0=1
+    1+1=0 (1 übertrag)
+    1+1+1 = 1 (1 übetrag)
+   
 ### Advice
 
 Understanding number systems takes time and practice, especially if you're new to binary or hexadecimal representations. Work through conversions methodically and double-check your intermediate results, particularly powers of two or sixteen. Use your calculator only to verify results after doing them by hand. Visual aids such as grouping binary digits when converting to hexadecimal can make the process easier. If this sheet was challenging, consider reviewing the [Number Systems Basics](#) sheet before proceeding to advanced topics like floating-point representation or base arithmetic.
